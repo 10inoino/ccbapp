@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('player_list');
 });
 
 Route::get('player_list', 'c_player_list@index');
