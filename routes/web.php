@@ -15,7 +15,8 @@
 //     return view('player_list');
 // });
 
-Route::get('/', 'c_player_list@index');
+// Route::get('/', 'c_player_list@index');
+Route::get('/', function () {return view('player_list.v_player_list');});
 
 Route::get('player_list/edit', 'c_player_list@edit');
 Route::post('player_list/edit', 'c_player_list@update');
