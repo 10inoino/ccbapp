@@ -15,8 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('player_list', 'c_player_list@index')
-    ->middleware('auth');
+Route::get('player_list', 'c_player_list@index');
 
 Route::get('player_list/edit', 'c_player_list@edit');
 Route::post('player_list/edit', 'c_player_list@update');

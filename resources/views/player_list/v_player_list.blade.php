@@ -1,18 +1,63 @@
+<?php
+    ini_set("memory_limit","1024M");
+
+    $player_names = [
+    	['伊星 洵一郎','iboshi','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['藤田 凌平','ryohei','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['猪股 光','ino','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['山田 航希','yamada','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['佐藤 悠希','yuki','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['岩村 岳','gaku','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['飯塚 春太','iizuka','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['山田 修也','shuya','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['佐藤 丈太郎','jo','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['藤田 竜輔','ryu','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['内山 智哉','tomo','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['新山 航希','niiyama','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['宮本 康平','miyamoto','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['田中 幸之介','tanaka','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','jpg'],
+        ['金井 賢治','ken','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png'],
+        ['山本 純也','yamamoto','Junichiro Iboshi','4','SG','キャリアコンサルティングバスケットボール部のキャプテン。大学では武蔵野大学のバスケットボール部のキャプテンとしても活躍。持ち前のスピードとジャンプシュートでチームを勝利に導く。','png']
+    ];
+
+    $array_js = json_encode($player_names);
+?>
+
 <!doctype html>
 <html lang="ja">
     <head>
         <mata charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/ccbapp/public/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/ccbapp/public/css/custom_style.css">
         <title>Player List</title>
     </head>
     <body>
-        <script src="/js/jquery-3.4.1.min.js"></script>
-        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="http://localhost/ccbapp/public/js/jquery-3.4.1.min.js"></script>
+        <script src="http://localhost/ccbapp/public/js/bootstrap.bundle.min.js"></script>
+        <script src="http://localhost/ccbapp/public/js/player_list.js"></script>
+        <script>
+            $(document).ready( function(){
+                var players = <?php echo $array_js ?>;
+                console.log(players);
 
-        <header class="py-4">
-            <div class="container text-center">
-                <h1 class="text-center"><a href="#"><img class="w-25" src="/img/ccblogo.png"></a></h1>
+                $('.player_detail_btn').on('click',function(){
+                    var btn_val = $(this).val();
+                    console.log(btn_val);
+                    $("#number").text(players[btn_val][3]);
+                    $("#name").text(players[btn_val][0]);
+                    $("#name-eng").text(players[btn_val][2]);
+                    $("#position").text(players[btn_val][4]);
+                    $("#desc").text(players[btn_val][5]);
+                    $('#modal-player-img').attr('src', 'http://localhost/ccbapp/public/img/' + players[btn_val][1] + '/top.' + players[btn_val][6]);
+                    $("#player_detail").modal('show');
+                });
+            });
+        </script>
+
+        <header class="m-0 logo-area">
+            <div class="container text-center py-4">
+                <h1 class="text-center z-1"><a href="#"><img class="w-25" src="http://localhost/ccbapp/public/img/ccblogo.png"></a></h1>
             </div>
         </header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
@@ -26,13 +71,7 @@
                             <a class="nav-link" href="#">TOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Roster</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Schedule</a>
+                            <a class="nav-link" href="#roster">Roster</a>
                         </li>
                     </ul>
                 </div>
@@ -42,7 +81,7 @@
             <!-- メインビジュアル -->
             <div class="py-4">
                 <div class="container">
-                    <div id="main_visual" class="carousel slide" data-ride="carousel">
+                    <div id="main_visual" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="">
                         <ol class="carousel-indicators">
                             <li data-target="#main_visual" data-slide-to="0" class="active"></li>
                             <li data-target="#main_visual" data-slide-to="1"></li>
@@ -50,16 +89,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <!-- 一枚目 -->
-                                <img class="img-fluid" src="/img/pic1.png">
+                                <img class="img-fluid" src="http://localhost/ccbapp/public/img/carousel/pic0.png">
                             </div>
                             <div class="carousel-item">
-                                <!-- 二枚目 -->
-                                <img class="img-fluid" src="/img/pic2.png">
+                                <img class="img-fluid" src="http://localhost/ccbapp/public/img/carousel/pic1.png">
                             </div>
                             <div class="carousel-item">
-                                <!-- 三枚目 -->
-                                <img class="img-fluid" src="/img/pic3.png">
+                                <img class="img-fluid" src="http://localhost/ccbapp/public/img/carousel/pic2.png">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#main_visual" role="button" data-slide="prev">
@@ -74,66 +110,53 @@
                 </div>
             </div>
             <div class="py-4 bg-light">
-                <section id="about">
+                <section id="roster">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">猪股　光</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
+                            <?php foreach($player_names as $key => $player): ?>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <img src="http://localhost/ccbapp/public/img/<?= $player[1] ?>/top.<?= $player[6] ?>" alt="" id="player-img" class="img-fluid"  onerror="this.src='http://localhost/ccbapp/public/img/no_image.png'">
+                                        <div class="card-body d-flex justify-content-between">
+                                            <h4 class="card-title"><?= $player[0] ?></h4>
+                                            <button type="button" class="player_detail_btn btn btn-primary" value="<?= $key ?>">詳しく見る</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">金澤　啓太</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">岩村　岳</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">岩村　岳</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">岩村　岳</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <img src="/img/no_image.png" alt="" class="img-fluid">
-                                    <div class="card-body d-flex justify-content-between">
-                                        <h4 class="card-title">岩村　岳</h4>
-                                        <button type="button" class="btn btn-primary">詳しく見る</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach ?>
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="modal fade" id="player_detail" tabindex="-1"role="dialog" aria-labelledby="label1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="font-weight-bold mr-3">#<span id="number"></span></h3>
+                            <h3 class="modal-title" id="name"><small id="name-eng" class="ml-3"></small></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="" alt="" id="modal-player-img" class="img-thumbnail" onerror="this.src='http://localhost/ccbapp/public/img/no_image.png'">
+                                </div>
+                                <div class="col-md-8 pt-4">
+                                    <div class="w-100">
+                                        <h5>ポジション:<span id="position" class="ml-3"></span></h5>
+                                    </div>
+                                    <div id="desc" class="pl-3">
+                                    </dvi>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </body>
