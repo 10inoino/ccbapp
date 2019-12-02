@@ -54,6 +54,8 @@
                     $('#modal-player-img').attr('src', base_url_js + '/img/' + players[btn_val][1] + '/top.' + players[btn_val][6]);
                     $("#player_detail").modal('show');
                 });
+
+                $('.logo-area').css('background-image','url(' . base_url_js . 'img/logo_area_background.jpg)');
             });
         </script>
 
@@ -91,13 +93,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic0.png">
+                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic0.PNG">
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic1.png">
+                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic1.PNG">
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic2.png">
+                                <img class="img-fluid" src="<?= $base_url ?>img/carousel/pic2.PNG">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#main_visual" role="button" data-slide="prev">
