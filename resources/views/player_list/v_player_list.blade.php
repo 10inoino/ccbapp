@@ -38,7 +38,7 @@
         .logo-area{
             width: 100%;
             height: auto;
-            background-image: url(<?= $base_url ?>/img/logo_area_background.jpg);
+            background-image: url(<?= $base_url ?>img/logo_area_background.jpg);
             background-size: cover;
             background-position:0% 50%;
         }
@@ -72,7 +72,7 @@
                     $("#name-eng").text(players[btn_val][2]);
                     $("#position").text(players[btn_val][4]);
                     $("#desc").text(players[btn_val][5]);
-                    $('#modal-player-img').attr('src', base_url_js + '/img/' + players[btn_val][1] + '/top.jpg');
+                    $('#modal-player-img').attr('src', base_url_js + 'img/' + players[btn_val][1] + '/top.jpg');
                     $("#player_detail").modal('show');
                 });
 
