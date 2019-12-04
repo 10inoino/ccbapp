@@ -38,7 +38,7 @@
         .logo-area{
             width: 100%;
             height: auto;
-            background-image: url(<?= $base_url ?>img/logo_area_background.jpg);
+            background-image: url(<?= $base_url ?>img/logo_area_background.JPG);
             background-size: cover;
             background-position:0% 50%;
         }
