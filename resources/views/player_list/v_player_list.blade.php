@@ -72,7 +72,7 @@
                     $("#name-eng").text(players[btn_val][2]);
                     $("#position").text(players[btn_val][4]);
                     $("#desc").text(players[btn_val][5]);
-                    $('#modal-player-img').attr('src', base_url_js + 'img/' + players[btn_val][1] + '/top.jpg');
+                    $('#modal-player-img').attr('src', base_url_js + 'img/' + players[btn_val][1] + '/top.JPG');
                     $("#player_detail").modal('show');
                 });
 
