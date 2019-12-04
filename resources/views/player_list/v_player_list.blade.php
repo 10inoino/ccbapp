@@ -34,6 +34,26 @@
         <link rel="stylesheet" type="text/css" href="<?= $base_url ?>css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="<?= $base_url ?>css/custom_style.css">
         <title>Player List</title>
+        <style>
+        .logo-area{
+            width: 100%;
+            height: auto;
+            background-image: url(<?= $base_url ?>/img/logo_area_background.jpg);
+            background-size: cover;
+            background-position:0% 50%;
+        }
+
+        .logo-area::after {
+            content: '';
+            background-color: rgba(255,255,255,0.5);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+        </style>
     </head>
     <body>
         <script src="<?= $base_url ?>js/jquery-3.4.1.min.js"></script>
