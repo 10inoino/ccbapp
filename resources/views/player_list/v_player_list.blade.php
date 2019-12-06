@@ -20,6 +20,8 @@
         ['山本 純也','yamamoto','Junya Yamamoto','0','PG/SG','大学2年生。NEXUS柳島さん担当。高校バスケ名門校の土浦日大高校出身。時には落ち着いたPGとしてチームの司令塔となり、時には持ち前のドライブとガッツで果敢にゴールにアタックする。']
     ];
 
+
+
     $base_url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     //$base_url = "http://localhost/ccbapp/public/";
 
