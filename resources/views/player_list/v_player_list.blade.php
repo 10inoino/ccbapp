@@ -268,7 +268,7 @@
                 <div class="py-4 mx-5">
                     <div class="row">
                         <div class="col-md-4 text-center position-desc pb-2">
-                            <span class="h4">PG</span><span class="ml-3 h6">Point Guard  ポイントガード</span>
+                            <div class="h4">PG</div><div class="ml-3 h6">Point Guard  ポイントガード</div>
                         </div>
                     </div>
                     <div class="row my-3">
@@ -281,7 +281,7 @@
 
                     <div class="row">
                         <div class="col-md-4 text-center position-desc pb-2">
-                            <span class="h4">SG</span><span class="ml-3 h6">Shooting Guard  シューティングガード</span>
+                            <div class="h4">SG</div><div class="ml-3 h6">Shooting Guard  シューティングガード</div>
                         </div>
                     </div>
                     <div class="row my-3">
@@ -294,7 +294,7 @@
 
                     <div class="row">
                         <div class="col-md-4 text-center position-desc pb-2">
-                            <span class="h4">SF</span><span class="ml-3 h6">Small Forward  スモールフォワード</span>
+                            <div class="h4">SF</div><div class="ml-3 h6">Small Forward  スモールフォワード</div>
                         </div>
                     </div>
                     <div class="row my-3">
@@ -307,7 +307,7 @@
 
                     <div class="row">
                         <div class="col-md-4 text-center position-desc pb-2">
-                            <span class="h4">PF</span><span class="ml-3 h6">Power Forward  パワーフォワード</span>
+                            <div class="h4">PF</div><div class="ml-3 h6">Power Forward  パワーフォワード</div>
                         </div>
                     </div>
                     <div class="row my-3">
@@ -320,7 +320,7 @@
 
                     <div class="row">
                         <div class="col-md-4 text-center position-desc pb-2">
-                            <span class="h4">C</span><span class="ml-3 h6">Center  センター</span>
+                            <div class="h4">C</div><div class="ml-3 h6">Center  センター</div>
                         </div>
                     </div>
                     <div class="row my-3">
