@@ -345,6 +345,43 @@
                 </div>
             </section>
 
+            <!-- 動画 -->
+            <section id="movies">
+                <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Movies</span><span class="ml-3 h6 text-white">動画集</span></div>
+                <div class="py-4 mx-5">
+                    <input type="hidden" id="ccb_movie_pass" value="ccbmoviepass">
+                    <div class="alert alert-danger d-none" id="movie_pass_danger">認証に失敗しました</div>
+                    <div class="alert alert-success d-none" id="movie_pass_success">認証が成功しました</div>
+                    動画を視聴するにはパスワードが必要です。
+                    <div class="row my-2">
+                        <div class="col-md-5 my-1">
+                            <input class="form-control" id="movie_pass" type="text" placeholder="パスワードを入力してください">
+                        </div>
+                        <div class="col-md-3 my-1">
+                            <button type="button" class="btn btn-primary" id="ccb_movie_btn">決定</button>
+                        </div>
+                    </div>
+                    <div id="movie-link-area" class="d-none my-3">
+                        <ul>
+                            <li class="my-2">
+                                <a href="https://www.youtube.com/playlist?list=PLtumMh042_wLUEmWnjvXlUTTF_u7R5zT9">20191028 vsみずほFC （練習試合）</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="https://www.youtube.com/playlist?list=PLtumMh042_wIBkTX77UFNB57qIAKXzQsR">20190928 vs東京DarkFund</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 練習日程 -->
+            <section id="schedule">
+                <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Schedule</span><span class="ml-3 h6 text-white">練習日程</span></div>
+                <div class="py-4 mx-5">
+
+                </div>
+            </section>
+
             <div class="modal fade" id="player_detail" tabindex="-1"role="dialog" aria-labelledby="label1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
