@@ -377,8 +377,86 @@
             <!-- 練習日程 -->
             <section id="schedule">
                 <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Schedule</span><span class="ml-3 h6 text-white">練習日程</span></div>
-                <div class="py-4 mx-5">
+                <div class="py-4 my-2 mx-5 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 h3 pra-date text-center">
+                            <div>12/8</div>
+                            <div>10:00~15:00</div>
+                        </div>
+                        <div class="col pra-detail">
+                            <div>場所：〇〇体育館</div>
+                            <div>備考：参加費1000円、弁当必要です。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 my-2 mx-5 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 h3 pra-date text-center">
+                            <div>12/8</div>
+                            <div>10:00~15:00</div>
+                        </div>
+                        <div class="col pra-detail">
+                            <div>場所：〇〇体育館</div>
+                            <div>備考：参加費1000円、弁当必要です。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 my-2 mx-5 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 h3 pra-date text-center">
+                            <div>12/8</div>
+                            <div>10:00~15:00</div>
+                        </div>
+                        <div class="col pra-detail">
+                            <div>場所：〇〇体育館</div>
+                            <div>備考：参加費1000円、弁当必要です。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- 試合結果 -->
+            <section id="game">
+                <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Result</span><span class="ml-3 h6 text-white">試合結果</span></div>
+                <div class="py-4 my-2 mx-5 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 h1 pra-date text-center text-primary">
+                            <div>WIN！</div>
+                        </div>
+                        <div class="col pra-detail">
+                            <div class="text-center">練習試合＠〇〇体育館</div>
+                            <div class="row"> 
+                                <div class="col text-center">チーム〇〇</div>
+                                <div class="col-md-2 text-center">VS</div>
+                                <div class="col text-center">チーム✕✕</div>
+                            </div>
+                            <div class="row"> 
+                                <div class="col text-center h4">90</div>
+                                <div class="col-md-2 text-center h4">-</div>
+                                <div class="col text-center h4">60</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 my-2 mx-5 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 h1 pra-date text-center text-secondary">
+                            <div>LOSE…</div>
+                        </div>
+                        <div class="col pra-detail">
+                            <div class="text-center">県大会第2戦＠△△体育館</div>
+                            <div class="row"> 
+                                <div class="col text-center">チーム〇〇</div>
+                                <div class="col-md-2 text-center">VS</div>
+                                <div class="col text-center">チーム✕✕</div>
+                            </div>
+                            <div class="row"> 
+                                <div class="col text-center h4">70</div>
+                                <div class="col-md-2 text-center h4">-</div>
+                                <div class="col text-center h4">90</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
