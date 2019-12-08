@@ -17,6 +17,7 @@
 
 // Route::get('/', 'c_player_list@index');
 Route::get('/', function () {return view('player_list.v_player_list');});
+Route::get('test', function () {return view('player_list.v_player_list_test');});
 
 // herokuに選手名鑑を出している間はコメントアウト
 // Route::get('player_list/edit', 'c_player_list@edit');

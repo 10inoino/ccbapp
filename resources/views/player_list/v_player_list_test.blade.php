@@ -175,6 +175,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#position_desc">Position Description</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movies">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#schedule">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#result">Result</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -416,7 +425,7 @@
             </section>
 
             <!-- 試合結果 -->
-            <section id="game">
+            <section id="result">
                 <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Result</span><span class="ml-3 h6 text-white">試合結果</span></div>
                 <div class="py-4 my-2 mx-5 card">
                     <div class="row no-gutters">
