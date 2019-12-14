@@ -449,7 +449,25 @@ class c_player_list extends Controller
 
     public function check_movie_pass(Request $request)
     {
-        
+        $movie_datas = [
+            ['https://www.youtube.com/playlist?list=PLtumMh042_wJLl1draYce3JdyMmBBySHc','20191208 vsLYMES'],
+            ['https://www.youtube.com/playlist?list=PLtumMh042_wLUEmWnjvXlUTTF_u7R5zT9','20191028 vsみずほFC （練習試合）'],
+            ['https://www.youtube.com/playlist?list=PLtumMh042_wIBkTX77UFNB57qIAKXzQsR','20190928 vs東京DarkFund'],
+            ['https://www.youtube.com/playlist?list=PLtumMh042_wKaJe7XtQvM4XB3JsITpOIg','20190824 vsエコプラン（練習試合）'],
+        ];
+
+        if ($request->movie_pass == 'ccbmoviepass') {
+            $dom = '<ul>';
+
+            foreach ($movie_datas as $movie) {
+                $dom .= '<li class="my-2"><a href="' . $movie[0] . '">' . $movie[1] . '</a></li>';
+            }
+
+            $dom .='</ul>';
+            echo $dom;
+        }else{
+            echo 'fail';
+        }
     }
 
 }

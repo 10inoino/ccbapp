@@ -34,8 +34,8 @@
     	['加藤 友里','kato','Yuri Kato','','MANAGER','社会人1年目。しがく金子課長代理担当。今現在も現役のプレイヤーとして活動し、女子キャリアバスケ部ではキャプテンを務める。男子の試合や練習の際にはマネージャーとして入って頂き、拝野と共にベンチワークや動画の撮影などをやってもらっている。また、バスケットボールに関わる仕事に従事しており、国内のバスケットボールに詳しい。']
     ];
 
-    $base_url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    //$base_url = "http://localhost/ccbapp/public/";
+    //$base_url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $base_url = "http://localhost/ccbapp/public/";
 
     $player_array_js = json_encode($player_names);
     $coach_array_js = json_encode($coaches);
@@ -116,42 +116,28 @@
                 });
 
                 $('#ccb_movie_btn').on('click',function(){
-
                     $.ajax({
-                        url:'./request.php',
+                        url:'/ccbapp/public/player_list/movie',
                         type:'POST',
                         data:{
-                            'userid':$('#userid').val(),
-                            'passward':$('#passward').val()
+                            movie_pass:$("#movie_pass").val(),
+                            _token: '{{ csrf_token() }}'
                         }
                     })
-                    // Ajaxリクエストが成功した時発動
-                    .done( (data) => {
-                        $('.result').html(data);
-                        console.log(data);
+                    .done( (response) => {
+                        if (response == 'fail') {
+                            $("#movie_pass_danger").removeClass('d-none');
+                            $("#movie_pass_success").addClass('d-none');
+                            $("#movie-link-area").empty();
+                        } else {
+                            $("#movie_pass_danger").addClass('d-none');
+                            $("#movie_pass_success").removeClass('d-none');
+                            $("#movie-link-area").html(response);
+                        }
                     })
-                    // Ajaxリクエストが失敗した時発動
-                    .fail( (data) => {
-                        $('.result').html(data);
-                        console.log(data);
+                    .fail( (response) => {
+                        alert('通信に失敗しました');
                     })
-                    // Ajaxリクエストが成功・失敗どちらでも発動
-                    .always( (data) => {
-
-                    });
-
-
-
-
-                    if ($("#movie_pass").val() == $("#ccb_movie_pass").val()) {
-                        $("#movie_pass_danger").addClass('d-none');
-                        $("#movie_pass_success").removeClass('d-none');
-                        $("#movie-link-area").removeClass('d-none');
-                    } else {
-                        $("#movie_pass_danger").removeClass('d-none');
-                        $("#movie_pass_success").addClass('d-none');
-                        $("#movie-link-area").addClass('d-none');
-                    }
                 });
             });
         </script>
@@ -371,6 +357,28 @@
                         <div class="col">
                             主にゴール下で動くプレイヤー。チーム内で長身のプレイヤーが担うことが多く、ゴール下でのリバウンドや、激しいぶつかり合いの中で、得点することが求められる。ディフェンスにおいてもゴールを守る最後の砦となるため、バスケットボールの攻防において重要なポジション。代表的な選手にはスラムダンク　赤木剛憲、元ロサンゼルス・レイカーズ　シャキール・オニールなどがいる。
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 動画 -->
+            <section id="movies">
+                <div class="pl-3 py-1 mx-5 bg-secondary"><span class="text-white h3">Movies</span><span class="ml-3 h6 text-white">動画集</span></div>
+                <div class="py-4 mx-5">
+                    <input type="hidden" id="ccb_movie_pass" value="ccbmoviepass">
+                    <div class="alert alert-danger d-none" id="movie_pass_danger">認証に失敗しました</div>
+                    <div class="alert alert-success d-none" id="movie_pass_success">認証が成功しました</div>
+                    動画を視聴するにはパスワードが必要です。
+                    <div class="row my-2">
+                        <div class="col-md-5 my-1">
+                            <input class="form-control" id="movie_pass" type="text" placeholder="パスワードを入力してください">
+                        </div>
+                        <div class="col-md-3 my-1">
+                            <button type="button" class="btn btn-primary" id="ccb_movie_btn">決定</button>
+                        </div>
+                    </div>
+                    <div id="movie-link-area" class="my-3">
+
                     </div>
                 </div>
             </section>
