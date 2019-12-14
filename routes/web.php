@@ -53,3 +53,5 @@ Route::get('test', function () {return view('player_list.v_player_list_test');})
 // Route::post('user/role_change', 'c_user@role_change');
 
 // Route::get('user/cancel', 'c_user@cancel');
+
+Route::post('player_list/movie', 'c_player_list@check_movie_pass');

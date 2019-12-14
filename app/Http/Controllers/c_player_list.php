@@ -447,4 +447,9 @@ class c_player_list extends Controller
         return redirect('/player_list');
     }
 
+    public function check_movie_pass(Request $request)
+    {
+        
+    }
+
 }
