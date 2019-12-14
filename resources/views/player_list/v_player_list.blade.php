@@ -34,8 +34,8 @@
     	['加藤 友里','kato','Yuri Kato','','MANAGER','社会人1年目。しがく金子課長代理担当。今現在も現役のプレイヤーとして活動し、女子キャリアバスケ部ではキャプテンを務める。男子の試合や練習の際にはマネージャーとして入って頂き、拝野と共にベンチワークや動画の撮影などをやってもらっている。また、バスケットボールに関わる仕事に従事しており、国内のバスケットボールに詳しい。']
     ];
 
-    $base_url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    //$base_url = "http://localhost/ccbapp/public/";
+    //$base_url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $base_url = "http://localhost/ccbapp/public/";
 
     $player_array_js = json_encode($player_names);
     $coach_array_js = json_encode($coaches);
@@ -117,11 +117,11 @@
 
                 $('#ccb_movie_btn').on('click',function(){
                     $.ajax({
-                        url:'/ccbapp/public/player_list/movie',
+                        url:base_url_js + 'player_list/movie',
                         type:'POST',
                         data:{
                             movie_pass:$("#movie_pass").val(),
-                            _token: '{{ csrf_token() }}'
+                            _token:'{{ csrf_token() }}'
                         }
                     })
                     .done( (response) => {
@@ -190,6 +190,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#position_desc">Position Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movies">Movies</a>
                         </li>
                     </ul>
                 </div>
