@@ -80,7 +80,7 @@
                 var players = <?php echo $player_array_js ?>;
                 var coaches = <?php echo $coach_array_js ?>;
                 var managers = <?php echo $manager_array_js ?>;
-                var base_url_js = "<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>";
+                var base_url_js = "<?php echo "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>";
 
                 $('.player_detail_btn').on('click',function(){
                     var btn_val = $(this).val();
@@ -117,7 +117,7 @@
 
                 $('#ccb_movie_btn').on('click',function(){
                     $.ajax({
-                        url:base_url_js + 'player_list/movie',
+                        url:'/player_list/movie',
                         type:'POST',
                         data:{
                             movie_pass:$("#movie_pass").val(),
